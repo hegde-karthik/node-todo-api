@@ -19,10 +19,13 @@ MongoClient.connect('mongodb://localhost:27017/Users',(err,client)=>{
   //   console.log(JSON.stringify(result.ops,undefined,2));
   // });
   //
-  // db.collection('Todos').find().count().then((docs)=>{
-  //   console.log(`todos count: ${docs}`);
-  // },(err)=>{
-  //   console.log(err);
-  // })
+
+
+      db.collection('Users').findOneAndDelete({ "Name" : "karthik hegde"}).then((result)=>{
+        console.log(result);
+      },(err)=>{
+        console.log(err);
+      });
+      
   client.close();
 });
