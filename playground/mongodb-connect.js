@@ -26,6 +26,6 @@ MongoClient.connect('mongodb://localhost:27017/Users',(err,client)=>{
       },(err)=>{
         console.log(err);
       });
-      
+
   client.close();
 });
